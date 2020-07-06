@@ -220,6 +220,8 @@ func (config *PushConsumerConfig) String() string {
 		str = strJoin(str, "MaxCacheMessageSize", config.MaxCacheMessageSize)
 	}
 
+        str = strJoin(str, "MaxReconsumeTimes", 3)
+
 	if config.MaxCacheMessageSizeInMB != 0 {
 		str = strJoin(str, "MaxCacheMessageSizeInMB", config.MaxCacheMessageSizeInMB)
 	}
